@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Diary, Part IV</title>
+  <script data-goatcounter="https://steffenhuck.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #1a1200;
+      --text-muted: #3a2e10;
+      --stage-color: #1a2f5e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: 'EB Garamond', serif;
+      font-size: 30px;
+      line-height: 1.85;
+      color: var(--text);
+      background: linear-gradient(175deg, #2460a0 0%, #3d8fcc 28%, #5aaede 58%, #7ccae8 82%, #98daf2 100%);
+      min-height: 100vh;
+      padding: 5rem 1.5rem 6rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .sky {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3.3rem;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .byline {
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      margin-bottom: 3.5rem;
+    }
+
+    .stage {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--stage-color);
+      font-size: 1.05rem;
+      margin: 0 0 1.4rem;
+      opacity: 0.9;
+    }
+
+    .speech {
+      margin: 1.4rem 0;
+    }
+
+    .line {
+      font-weight: 400;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    footer {
+      margin-top: 5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(26, 18, 0, 0.25);
+    }
+
+    footer a {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: var(--text);
+      text-decoration: none;
+      text-transform: lowercase;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    footer a:hover { opacity: 1; }
+
+    @media (max-width: 600px) {
+      body { font-size: 24px; padding: 3rem 1.2rem 4rem; }
+      h1 { font-size: 2.5rem; }
+    }
+
+    /* Cloud animations — short cycles so vertical movement is visible */
+    @keyframes float1 {
+      0%   { transform: translateX(-300px) translateY(0px)   scale(1.00); opacity: 0.25; }
+      20%  { transform: translateX(calc(20vw)) translateY(-70px)  scale(1.08); opacity: 0.70; }
+      50%  { transform: translateX(calc(50vw)) translateY(40px)   scale(0.92); opacity: 0.30; }
+      75%  { transform: translateX(calc(75vw)) translateY(-55px)  scale(1.06); opacity: 0.65; }
+      100% { transform: translateX(calc(100vw + 300px)) translateY(0px) scale(1.00); opacity: 0.25; }
+    }
+    @keyframes float2 {
+      0%   { transform: translateX(-250px) translateY(0px)   scale(1.00); opacity: 0.65; }
+      30%  { transform: translateX(calc(30vw)) translateY(80px)   scale(1.10); opacity: 0.22; }
+      60%  { transform: translateX(calc(60vw)) translateY(-50px)  scale(0.90); opacity: 0.72; }
+      100% { transform: translateX(calc(100vw + 250px)) translateY(0px) scale(1.00); opacity: 0.65; }
+    }
+    @keyframes float3 {
+      0%   { transform: translateX(-350px) translateY(0px)   scale(1.00); opacity: 0.70; }
+      25%  { transform: translateX(calc(25vw)) translateY(-85px)  scale(1.09); opacity: 0.25; }
+      55%  { transform: translateX(calc(55vw)) translateY(60px)   scale(0.91); opacity: 0.68; }
+      80%  { transform: translateX(calc(80vw)) translateY(-40px)  scale(1.05); opacity: 0.28; }
+      100% { transform: translateX(calc(100vw + 350px)) translateY(0px) scale(1.00); opacity: 0.70; }
+    }
+    @keyframes float4 {
+      0%   { transform: translateX(-200px) translateY(0px)   scale(1.00); opacity: 0.30; }
+      40%  { transform: translateX(calc(40vw)) translateY(70px)   scale(1.11); opacity: 0.68; }
+      70%  { transform: translateX(calc(70vw)) translateY(-45px)  scale(0.89); opacity: 0.25; }
+      100% { transform: translateX(calc(100vw + 200px)) translateY(0px) scale(1.00); opacity: 0.30; }
+    }
+    @keyframes float5 {
+      0%   { transform: translateX(-280px) translateY(0px)   scale(1.00); opacity: 0.55; }
+      35%  { transform: translateX(calc(35vw)) translateY(-75px)  scale(1.07); opacity: 0.22; }
+      65%  { transform: translateX(calc(65vw)) translateY(55px)   scale(0.93); opacity: 0.65; }
+      100% { transform: translateX(calc(100vw + 280px)) translateY(0px) scale(1.00); opacity: 0.55; }
+    }
+
+    .cloud { position: absolute; }
+
+    .cloud-1 { top: 30%; animation: float1 140s ease-in-out infinite; }
+    .cloud-2 { top: 45%; animation: float2 110s ease-in-out infinite; animation-delay: -36s; }
+    .cloud-3 { top: 55%; animation: float3 100s ease-in-out infinite; animation-delay: -60s; }
+    .cloud-4 { top: 68%; animation: float4 120s ease-in-out infinite; animation-delay: -20s; }
+    .cloud-5 { top: 78%; animation: float5 96s ease-in-out infinite; animation-delay: -76s; }
+    .cloud-6 { top: 38%; animation: float2 130s ease-in-out infinite; animation-delay: -50s; }
+    .cloud-7 { top: 62%; animation: float1 104s ease-in-out infinite; animation-delay: -84s; }
+  </style>
+</head>
+<body>
+
+  <div class="sky">
+    <!-- Puffy cloud 1 — large -->
+    <svg class="cloud cloud-1" width="280" height="160" viewBox="0 0 280 160">
+      <ellipse cx="140" cy="130" rx="130" ry="30" fill="white"/>
+      <ellipse cx="80"  cy="110" rx="70"  ry="55" fill="white"/>
+      <ellipse cx="160" cy="105" rx="75"  ry="60" fill="white"/>
+      <ellipse cx="110" cy="85"  rx="60"  ry="52" fill="white"/>
+      <ellipse cx="170" cy="80"  rx="55"  ry="48" fill="white"/>
+      <ellipse cx="140" cy="65"  rx="50"  ry="45" fill="white"/>
+      <ellipse cx="120" cy="50"  rx="38"  ry="36" fill="white"/>
+      <ellipse cx="155" cy="48"  rx="35"  ry="32" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 2 — medium -->
+    <svg class="cloud cloud-2" width="200" height="120" viewBox="0 0 200 120">
+      <ellipse cx="100" cy="100" rx="90"  ry="22" fill="white"/>
+      <ellipse cx="60"  cy="82"  rx="52"  ry="42" fill="white"/>
+      <ellipse cx="120" cy="78"  rx="56"  ry="46" fill="white"/>
+      <ellipse cx="88"  cy="60"  rx="44"  ry="40" fill="white"/>
+      <ellipse cx="125" cy="58"  rx="40"  ry="36" fill="white"/>
+      <ellipse cx="105" cy="44"  rx="34"  ry="30" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 3 — large wide -->
+    <svg class="cloud cloud-3" width="360" height="180" viewBox="0 0 360 180">
+      <ellipse cx="180" cy="155" rx="170" ry="28" fill="white"/>
+      <ellipse cx="90"  cy="130" rx="85"  ry="65" fill="white"/>
+      <ellipse cx="190" cy="125" rx="90"  ry="70" fill="white"/>
+      <ellipse cx="280" cy="130" rx="78"  ry="58" fill="white"/>
+      <ellipse cx="135" cy="98"  rx="70"  ry="60" fill="white"/>
+      <ellipse cx="210" cy="92"  rx="68"  ry="58" fill="white"/>
+      <ellipse cx="170" cy="72"  rx="58"  ry="52" fill="white"/>
+      <ellipse cx="145" cy="52"  rx="44"  ry="40" fill="white"/>
+      <ellipse cx="195" cy="50"  rx="42"  ry="38" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 4 — small -->
+    <svg class="cloud cloud-4" width="160" height="100" viewBox="0 0 160 100">
+      <ellipse cx="80"  cy="82"  rx="72"  ry="20" fill="white"/>
+      <ellipse cx="48"  cy="66"  rx="42"  ry="36" fill="white"/>
+      <ellipse cx="98"  cy="62"  rx="46"  ry="38" fill="white"/>
+      <ellipse cx="72"  cy="46"  rx="36"  ry="32" fill="white"/>
+      <ellipse cx="100" cy="44"  rx="32"  ry="28" fill="white"/>
+      <ellipse cx="84"  cy="32"  rx="28"  ry="24" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 5 — medium wide -->
+    <svg class="cloud cloud-5" width="300" height="150" viewBox="0 0 300 150">
+      <ellipse cx="150" cy="128" rx="140" ry="24" fill="white"/>
+      <ellipse cx="80"  cy="108" rx="72"  ry="56" fill="white"/>
+      <ellipse cx="165" cy="102" rx="78"  ry="62" fill="white"/>
+      <ellipse cx="240" cy="108" rx="62"  ry="48" fill="white"/>
+      <ellipse cx="120" cy="78"  rx="62"  ry="54" fill="white"/>
+      <ellipse cx="185" cy="74"  rx="58"  ry="50" fill="white"/>
+      <ellipse cx="152" cy="56"  rx="48"  ry="44" fill="white"/>
+      <ellipse cx="138" cy="38"  rx="36"  ry="32" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 6 — small wispy -->
+    <svg class="cloud cloud-6" width="140" height="85" viewBox="0 0 140 85">
+      <ellipse cx="70"  cy="70"  rx="62"  ry="16" fill="white"/>
+      <ellipse cx="42"  cy="56"  rx="36"  ry="30" fill="white"/>
+      <ellipse cx="88"  cy="52"  rx="40"  ry="34" fill="white"/>
+      <ellipse cx="64"  cy="38"  rx="30"  ry="28" fill="white"/>
+      <ellipse cx="90"  cy="36"  rx="28"  ry="24" fill="white"/>
+    </svg>
+
+    <!-- Puffy cloud 7 — medium -->
+    <svg class="cloud cloud-7" width="240" height="135" viewBox="0 0 240 135">
+      <ellipse cx="120" cy="114" rx="110" ry="22" fill="white"/>
+      <ellipse cx="70"  cy="94"  rx="62"  ry="50" fill="white"/>
+      <ellipse cx="148" cy="90"  rx="68"  ry="54" fill="white"/>
+      <ellipse cx="105" cy="68"  rx="54"  ry="48" fill="white"/>
+      <ellipse cx="148" cy="66"  rx="50"  ry="44" fill="white"/>
+      <ellipse cx="125" cy="48"  rx="42"  ry="38" fill="white"/>
+      <ellipse cx="112" cy="32"  rx="30"  ry="26" fill="white"/>
+    </svg>
+  </div>
+
+  <div class="container">
+
+    <h1>The Diary, Part IV</h1>
+    <p class="byline">The First Student</p>
+
+    <p class="stage">(A first class suite on an A380 over the Atlantic. The First Student writes his diary, reading softly aloud after every few lines.)</p>
+
+    <div class="speech">
+      <div class="line">I got bumped up into first. So much space, so much privacy. There would be room enough for two…</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">In Buenos Aires we didn't have much time together. For whatever reason, we didn't even share a room. Well, maybe a little wink from her.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">I think it was our least interesting trip so far. The first day was just creepy. The doctor looked at us as if we were subjects for his next awful experiment. The only interesting thing he had to say was about the care he took in vanishing. I made some notes about that. May be useful at some stage. Although I hope not, of course.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">His buddies weren't much better. Maybe that's what exile does to one. They all live in the past. No comparison to the Industrialist. I mean that guy — he was adaptive, he had a clear plan.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">Working with him is something I could imagine — he would be useful AND playable.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">Our "esteemed lecturer" the next day was just a weirdo. I think he doesn't get it at all. He will be out soon. A short reign. With nothing but poverty to show for it. That there are so many economists who like him tells it all.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">He will be just a footnote.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">N gave him some flak. That was the best bit.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">One thing I don't get — why the hairdos? I hope I won't be forced into one some day. Also, please, no weird moustache.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">Then again, perhaps one of the smaller burdens that await us.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">I will ask ChatGPT to render me as one of them. Have to think about the best prompt.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">She was also there, completely devoted to N, as always. And no weird glances this time. She was completely in her role. Can I stop worrying? I don't think so. Not yet.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">I must admit I'm still thinking about the girl. She even came to me in a dream. In a way that I cannot write down. It feels like a betrayal.</div>
+    </div>
+
+    <p class="stage">(The First Student gets up, leaves his suite for a moment, then returns.)</p>
+
+    <div class="speech">
+      <div class="line">He is deep asleep. I was tempted to wake him.</div>
+    </div>
+
+    <div class="speech">
+      <div class="line">In a couple of weeks, we will have exams. Apparently there will be two parts. The Instructor called it an exam in an almost classical mode.</div>
+    </div>
+
+    <footer>
+      <a href="https://steffenhuck.github.io/">steffen huck</a>
+    </footer>
+
+  </div>
+</body>
+</html>
