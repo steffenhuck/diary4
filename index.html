@@ -19,7 +19,7 @@
 
     body {
       font-family: 'EB Garamond', serif;
-      font-size: 30px;
+      font-size: 24px;
       line-height: 1.85;
       color: var(--text);
       background: linear-gradient(175deg, #2460a0 0%, #3d8fcc 28%, #5aaede 58%, #7ccae8 82%, #98daf2 100%);
@@ -45,7 +45,7 @@
     }
 
     h1 {
-      font-size: 3.3rem;
+      font-size: 2.7rem;
       font-weight: 500;
       color: var(--text);
       letter-spacing: 0.04em;
@@ -54,7 +54,7 @@
     }
 
     .byline {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 400;
       font-style: italic;
       color: var(--text-muted);
@@ -103,8 +103,8 @@
     footer a:hover { opacity: 1; }
 
     @media (max-width: 600px) {
-      body { font-size: 24px; padding: 3rem 1.2rem 4rem; }
-      h1 { font-size: 2.5rem; }
+      body { font-size: 20px; padding: 3rem 1.2rem 4rem; }
+      h1 { font-size: 2.1rem; }
     }
 
     /* Cloud animations — short cycles so vertical movement is visible */
@@ -157,79 +157,94 @@
   <div class="sky">
     <!-- Puffy cloud 1 — large -->
     <svg class="cloud cloud-1" width="280" height="160" viewBox="0 0 280 160">
-      <ellipse cx="140" cy="130" rx="130" ry="30" fill="white"/>
-      <ellipse cx="80"  cy="110" rx="70"  ry="55" fill="white"/>
-      <ellipse cx="160" cy="105" rx="75"  ry="60" fill="white"/>
-      <ellipse cx="110" cy="85"  rx="60"  ry="52" fill="white"/>
-      <ellipse cx="170" cy="80"  rx="55"  ry="48" fill="white"/>
-      <ellipse cx="140" cy="65"  rx="50"  ry="45" fill="white"/>
-      <ellipse cx="120" cy="50"  rx="38"  ry="36" fill="white"/>
-      <ellipse cx="155" cy="48"  rx="35"  ry="32" fill="white"/>
+      <ellipse cx="80"  cy="120" rx="65"  ry="40" fill="white"/>
+      <ellipse cx="160" cy="118" rx="70"  ry="42" fill="white"/>
+      <ellipse cx="220" cy="122" rx="55"  ry="36" fill="white"/>
+      <ellipse cx="110" cy="105" rx="72"  ry="55" fill="white"/>
+      <ellipse cx="180" cy="102" rx="68"  ry="52" fill="white"/>
+      <ellipse cx="140" cy="85"  rx="62"  ry="50" fill="white"/>
+      <ellipse cx="110" cy="68"  rx="50"  ry="44" fill="white"/>
+      <ellipse cx="165" cy="65"  rx="48"  ry="42" fill="white"/>
+      <ellipse cx="138" cy="50"  rx="40"  ry="36" fill="white"/>
+      <ellipse cx="120" cy="36"  rx="30"  ry="28" fill="white"/>
+      <ellipse cx="155" cy="34"  rx="28"  ry="26" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 2 — medium -->
     <svg class="cloud cloud-2" width="200" height="120" viewBox="0 0 200 120">
-      <ellipse cx="100" cy="100" rx="90"  ry="22" fill="white"/>
-      <ellipse cx="60"  cy="82"  rx="52"  ry="42" fill="white"/>
-      <ellipse cx="120" cy="78"  rx="56"  ry="46" fill="white"/>
-      <ellipse cx="88"  cy="60"  rx="44"  ry="40" fill="white"/>
-      <ellipse cx="125" cy="58"  rx="40"  ry="36" fill="white"/>
-      <ellipse cx="105" cy="44"  rx="34"  ry="30" fill="white"/>
+      <ellipse cx="50"  cy="95"  rx="44"  ry="28" fill="white"/>
+      <ellipse cx="140" cy="93"  rx="50"  ry="30" fill="white"/>
+      <ellipse cx="72"  cy="78"  rx="55"  ry="44" fill="white"/>
+      <ellipse cx="138" cy="74"  rx="52"  ry="42" fill="white"/>
+      <ellipse cx="100" cy="58"  rx="46"  ry="40" fill="white"/>
+      <ellipse cx="82"  cy="42"  rx="36"  ry="32" fill="white"/>
+      <ellipse cx="118" cy="40"  rx="32"  ry="28" fill="white"/>
+      <ellipse cx="98"  cy="26"  rx="26"  ry="22" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 3 — large wide -->
-    <svg class="cloud cloud-3" width="360" height="180" viewBox="0 0 360 180">
-      <ellipse cx="180" cy="155" rx="170" ry="28" fill="white"/>
-      <ellipse cx="90"  cy="130" rx="85"  ry="65" fill="white"/>
-      <ellipse cx="190" cy="125" rx="90"  ry="70" fill="white"/>
-      <ellipse cx="280" cy="130" rx="78"  ry="58" fill="white"/>
-      <ellipse cx="135" cy="98"  rx="70"  ry="60" fill="white"/>
-      <ellipse cx="210" cy="92"  rx="68"  ry="58" fill="white"/>
-      <ellipse cx="170" cy="72"  rx="58"  ry="52" fill="white"/>
-      <ellipse cx="145" cy="52"  rx="44"  ry="40" fill="white"/>
-      <ellipse cx="195" cy="50"  rx="42"  ry="38" fill="white"/>
+    <svg class="cloud cloud-3" width="400" height="200" viewBox="0 0 400 200" overflow="visible">
+      <ellipse cx="60"  cy="162" rx="52"  ry="34" fill="white"/>
+      <ellipse cx="160" cy="158" rx="62"  ry="38" fill="white"/>
+      <ellipse cx="255" cy="160" rx="58"  ry="34" fill="white"/>
+      <ellipse cx="100" cy="136" rx="76"  ry="56" fill="white"/>
+      <ellipse cx="195" cy="130" rx="82"  ry="62" fill="white"/>
+      <ellipse cx="285" cy="134" rx="68"  ry="50" fill="white"/>
+      <ellipse cx="145" cy="100" rx="70"  ry="58" fill="white"/>
+      <ellipse cx="230" cy="96"  rx="66"  ry="54" fill="white"/>
+      <ellipse cx="188" cy="74"  rx="56"  ry="50" fill="white"/>
+      <ellipse cx="162" cy="52"  rx="42"  ry="36" fill="white"/>
+      <ellipse cx="210" cy="50"  rx="40"  ry="34" fill="white"/>
+      <ellipse cx="185" cy="34"  rx="30"  ry="26" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 4 — small -->
     <svg class="cloud cloud-4" width="160" height="100" viewBox="0 0 160 100">
-      <ellipse cx="80"  cy="82"  rx="72"  ry="20" fill="white"/>
-      <ellipse cx="48"  cy="66"  rx="42"  ry="36" fill="white"/>
-      <ellipse cx="98"  cy="62"  rx="46"  ry="38" fill="white"/>
-      <ellipse cx="72"  cy="46"  rx="36"  ry="32" fill="white"/>
-      <ellipse cx="100" cy="44"  rx="32"  ry="28" fill="white"/>
-      <ellipse cx="84"  cy="32"  rx="28"  ry="24" fill="white"/>
+      <ellipse cx="45"  cy="78"  rx="38"  ry="24" fill="white"/>
+      <ellipse cx="112" cy="76"  rx="42"  ry="26" fill="white"/>
+      <ellipse cx="62"  cy="62"  rx="44"  ry="36" fill="white"/>
+      <ellipse cx="106" cy="60"  rx="42"  ry="34" fill="white"/>
+      <ellipse cx="82"  cy="44"  rx="36"  ry="32" fill="white"/>
+      <ellipse cx="70"  cy="30"  rx="28"  ry="24" fill="white"/>
+      <ellipse cx="98"  cy="28"  rx="26"  ry="22" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 5 — medium wide -->
-    <svg class="cloud cloud-5" width="300" height="150" viewBox="0 0 300 150">
-      <ellipse cx="150" cy="128" rx="140" ry="24" fill="white"/>
-      <ellipse cx="80"  cy="108" rx="72"  ry="56" fill="white"/>
-      <ellipse cx="165" cy="102" rx="78"  ry="62" fill="white"/>
-      <ellipse cx="240" cy="108" rx="62"  ry="48" fill="white"/>
-      <ellipse cx="120" cy="78"  rx="62"  ry="54" fill="white"/>
-      <ellipse cx="185" cy="74"  rx="58"  ry="50" fill="white"/>
-      <ellipse cx="152" cy="56"  rx="48"  ry="44" fill="white"/>
-      <ellipse cx="138" cy="38"  rx="36"  ry="32" fill="white"/>
+    <svg class="cloud cloud-5" width="320" height="150" viewBox="0 0 320 150" overflow="visible">
+      <ellipse cx="58"  cy="118" rx="48"  ry="28" fill="white"/>
+      <ellipse cx="158" cy="116" rx="58"  ry="30" fill="white"/>
+      <ellipse cx="255" cy="118" rx="50"  ry="26" fill="white"/>
+      <ellipse cx="92"  cy="98"  rx="68"  ry="50" fill="white"/>
+      <ellipse cx="180" cy="94"  rx="74"  ry="54" fill="white"/>
+      <ellipse cx="258" cy="98"  rx="58"  ry="42" fill="white"/>
+      <ellipse cx="132" cy="70"  rx="60"  ry="50" fill="white"/>
+      <ellipse cx="200" cy="66"  rx="58"  ry="46" fill="white"/>
+      <ellipse cx="164" cy="48"  rx="48"  ry="40" fill="white"/>
+      <ellipse cx="144" cy="30"  rx="34"  ry="28" fill="white"/>
+      <ellipse cx="182" cy="28"  rx="30"  ry="24" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 6 — small wispy -->
     <svg class="cloud cloud-6" width="140" height="85" viewBox="0 0 140 85">
-      <ellipse cx="70"  cy="70"  rx="62"  ry="16" fill="white"/>
-      <ellipse cx="42"  cy="56"  rx="36"  ry="30" fill="white"/>
-      <ellipse cx="88"  cy="52"  rx="40"  ry="34" fill="white"/>
-      <ellipse cx="64"  cy="38"  rx="30"  ry="28" fill="white"/>
-      <ellipse cx="90"  cy="36"  rx="28"  ry="24" fill="white"/>
+      <ellipse cx="38"  cy="68"  rx="32"  ry="20" fill="white"/>
+      <ellipse cx="100" cy="66"  rx="36"  ry="22" fill="white"/>
+      <ellipse cx="55"  cy="54"  rx="38"  ry="30" fill="white"/>
+      <ellipse cx="96"  cy="52"  rx="36"  ry="28" fill="white"/>
+      <ellipse cx="72"  cy="38"  rx="30"  ry="26" fill="white"/>
+      <ellipse cx="60"  cy="24"  rx="22"  ry="18" fill="white"/>
+      <ellipse cx="86"  cy="22"  rx="20"  ry="16" fill="white"/>
     </svg>
 
     <!-- Puffy cloud 7 — medium -->
     <svg class="cloud cloud-7" width="240" height="135" viewBox="0 0 240 135">
-      <ellipse cx="120" cy="114" rx="110" ry="22" fill="white"/>
-      <ellipse cx="70"  cy="94"  rx="62"  ry="50" fill="white"/>
-      <ellipse cx="148" cy="90"  rx="68"  ry="54" fill="white"/>
-      <ellipse cx="105" cy="68"  rx="54"  ry="48" fill="white"/>
-      <ellipse cx="148" cy="66"  rx="50"  ry="44" fill="white"/>
-      <ellipse cx="125" cy="48"  rx="42"  ry="38" fill="white"/>
-      <ellipse cx="112" cy="32"  rx="30"  ry="26" fill="white"/>
+      <ellipse cx="55"  cy="110" rx="48"  ry="28" fill="white"/>
+      <ellipse cx="155" cy="108" rx="56"  ry="30" fill="white"/>
+      <ellipse cx="80"  cy="90"  rx="65"  ry="50" fill="white"/>
+      <ellipse cx="162" cy="86"  rx="66"  ry="52" fill="white"/>
+      <ellipse cx="118" cy="66"  rx="56"  ry="48" fill="white"/>
+      <ellipse cx="100" cy="48"  rx="44"  ry="38" fill="white"/>
+      <ellipse cx="140" cy="46"  rx="42"  ry="36" fill="white"/>
+      <ellipse cx="118" cy="30"  rx="32"  ry="26" fill="white"/>
     </svg>
   </div>
 
